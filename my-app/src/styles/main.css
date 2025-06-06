@@ -1,0 +1,113 @@
+.navbar {
+  background-color: #670d0f;
+  padding: 1rem;
+}
+.navbar .navbar-brand {
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+.navbar .nav-item .nav-link {
+  color: #ffce6f;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+  margin: 0 5px;
+}
+.navbar .nav-item .nav-link:hover {
+  color: aliceblue;
+  font-size: 22px;
+}
+
+.collapse {
+  margin-left: 20%;
+}
+
+.section-links {
+  display: flex;
+  margin-left: 10%;
+  align-items: center;
+}
+.section-links li {
+  margin: 0 13px;
+}
+.section-links a .bi {
+  font-size: 22px;
+  color: #ffe3c9;
+}
+
+.carousel {
+  height: 80vh;
+}
+.carousel .carousel-item:nth-child(1) {
+  background-image: url("https://images.pexels.com/photos/129208/pexels-photo-129208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+}
+.carousel .carousel-item:nth-child(2) {
+  background-image: url("https://images.pexels.com/photos/1830447/pexels-photo-1830447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-position-y: -260px;
+}
+.carousel .carousel-item:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-item h1 {
+  color: rgb(68, 62, 62);
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+.carousel-item h1:nth-child(1) {
+  padding-top: 3rem;
+  font-size: 25px;
+}
+.carousel-item p {
+  font-size: 20px;
+  color: #670d0f;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+.carousel-item button {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.card {
+  border: none;
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(230, 233, 233);
+  position: relative;
+  width: 14rem;
+}
+.card .card-body {
+  background-color: #ffffff;
+}
+.card span {
+  position: absolute;
+  top: 0;
+  padding: 5px 7px 5px 0px;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 10px 0 0 0;
+  background-color: #f01945;
+  letter-spacing: 2px;
+  left: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}/*# sourceMappingURL=main.css.map */

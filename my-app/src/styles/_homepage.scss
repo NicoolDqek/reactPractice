@@ -1,0 +1,112 @@
+// navbar
+
+
+
+.navbar{
+    background-color: $vino_tinto;
+    padding: 1rem;
+   
+.navbar-brand{
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+ .nav-item{
+
+    .nav-link{
+         
+        color:$amarillo_quemado;
+        letter-spacing: 3px;
+        font-weight: 700;
+        font-size: 20px;
+        transition: .5s ease-in-out;
+        margin: 0 5px;
+     &:hover{
+       color: aliceblue;
+       font-size: 22px;
+     }
+    }
+
+}  
+}
+
+.collapse{
+    margin-left: 20%;
+}
+
+.section-links{
+    display: flex;
+    margin-left: 10%;
+    align-items: center;
+    
+
+   li{
+    margin: 0 13px;
+   } 
+   a{
+    .bi{
+        font-size: 22px;
+        color: $color_piel;
+         
+    }
+   }
+}
+
+// header
+
+.carousel {
+    height: 80vh;
+
+
+.carousel-item:nth-child(1){
+   background-image: url("https://images.pexels.com/photos/129208/pexels-photo-129208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");  
+   height: 80vh;
+   background-position: center;
+   background-size: cover;
+}
+.carousel-item:nth-child(2){
+   background-image: url("https://images.pexels.com/photos/1830447/pexels-photo-1830447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");  
+   height: 80vh;
+   background-position: center;
+   background-size: cover;
+   background-position-y: -260px;
+}
+.carousel-item:nth-child(3){
+   background-image: url("https://images.pexels.com/photos/3614082/pexels-photo-3614082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");  
+   height: 80vh;
+   background-position: center;
+   background-size: cover;
+}
+
+ 
+}
+.carousel-item{
+ h1{
+    color: rgb(68, 62, 62);
+    letter-spacing: 5px;
+    font-weight: 700;
+ }
+h1:nth-child(1){
+    padding-top: 3rem;
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+    color: $vino_tinto;
+    font-weight: 400;
+    letter-spacing: 4px;
+
+}
+button{
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    letter-spacing: 4px;
+    font-weight:500;
+
+
+
+}
+
+}
