@@ -8,12 +8,14 @@ function ProductList() {
 const {productList}=useContext(AppContextV) 
 
   return (
-    <div className='container justify-content-center aling-items-center d-flex flex-wrap'>
+    <div  >
+     <div style={{paddingTop:"10rem"}} className='container  justify-content-center aling-items-center d-flex flex-wrap'>
       {productList.map(p=>(
         <div  key={p.id}>
           <ProductCard product={p}/> 
         </div>
-    ))}
+    ))}</div>
+      
     </div>
   )
 }

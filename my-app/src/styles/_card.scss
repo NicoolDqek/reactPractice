@@ -1,23 +1,97 @@
-.card{
-    border: none;
-    border-radius: 10px 10px 0 0 ;
-    background-color: rgb(230, 233, 233);
-    position: relative;
-    width: 14rem;
-    .card-body{
-    background-color: #ffffff;
-}
-span{
-position: absolute;
-top: 0;
-padding: 5px 7px 5px 0px;
- 
-font-size: 14px;
-color: #ffffff;
-border-radius: 10px 0 0 0;
-background-color: $rojo_brillante;
-letter-spacing: 2px;
-left: 0;
+.card {
+  border: none;
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(230, 233, 233);
+  position: relative;
+  width: 14rem;
+  height: 400px;
+  overflow: hidden;
 
+  .botones {
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    border-radius: 0 0 0 10px;
+
+    button {
+      border: none;
+      padding: 5px;
+      background-color: rgb(230, 233, 233);
+      font-size: 15px;
+    }
+  }
+
+  .card-body {
+    background-color: #ffffff;
+    text-align: center;
+    @include fuente($font_style, 300, $vino_tinto, 2px);
+    height: 100%;
+   
+
+    button {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.5s ease-in-out;
+      border: none;
+      background-color: $rojo_brillante;
+      @include fuente($font_style, 300, $color_piel, 2px);
+      border-radius: 10px;
+      padding: 6px;
+    }
+  }
+
+ 
+  &:hover  button {
+    bottom:20px;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 7px 5px 5px;
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 10px 0 10px 0;
+    background-color: $rojo_brillante;
+    letter-spacing: 2px;
+  }
 }
+
+.banners{
+justify-content: center;
+ 
+.card{
+    margin: 2rem;
+    width: 450px;
 }
+  .card .card-body{
+   height: 200px;
+
+   a, p{
+      @include fuente($font_style, 300, black, 2px);
+   }
+}  
+}
+.banners{
+
+   .card{
+    background-size: cover;
+    .card-body{
+        background-size: cover;
+        background-position: center;
+    }
+    .c1{
+        
+    background-image: url("https://plus.unsplash.com/premium_photo-1684407616428-8a42a289b288?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+ } 
+   .c2{
+    background-image: url("https://plus.unsplash.com/premium_photo-1683121730776-feef85b8299f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+ }
+   }
+   
+ 
+}
+

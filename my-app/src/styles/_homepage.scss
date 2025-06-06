@@ -3,8 +3,11 @@
 
 
 .navbar{
-    background-color: $vino_tinto;
+    background-color: $rojo_brillante;
     padding: 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
    
 .navbar-brand{
     color: white;
@@ -16,7 +19,7 @@
 
     .nav-link{
          
-        color:$amarillo_quemado;
+        color:$color_piel;
         letter-spacing: 3px;
         font-weight: 700;
         font-size: 20px;
@@ -29,6 +32,7 @@
     }
 
 }  
+ 
 }
 
 .collapse{
@@ -39,7 +43,7 @@
     display: flex;
     margin-left: 10%;
     align-items: center;
-    
+   
 
    li{
     margin: 0 13px;
@@ -109,4 +113,123 @@ button{
 
 }
 
+}
+// product-section
+
+.categorias{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+     
+  
+
+    button{
+        margin: 5px;
+        background-color: $rojo_brillante;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 12px;
+        @include fuente($font_style,600,$color_piel,2px)
+    }
+}
+.section-p{
+    h1{
+        text-align: center;
+        padding: 2rem;
+        text-transform: uppercase;
+      @include fuente($font_style,500,$vino_tinto,3px)
+    }
+}
+.product-section{
+    display: flex;
+    margin-top:3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+//Foooter
+
+.footer {
+
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    .bnn{
+      display:flex;
+      height: 30vh;
+      
+     
+      
+
+    .bnn1{
+        padding: 2rem;
+  background-color: rgb(35, 35, 34);
+  @include fuente($font_style,400,white,2px)
+    }
+
+    .bnn2{
+        padding: 2rem;
+     background-color: $rojo_brillante;
+     @include fuente($font_style,400,rgb(0, 0, 0),2px);
+     
+     .bar{
+        position: relative;
+        
+     }
+     input{
+        width: 90%;
+        padding: .4rem;
+        position: relative;
+      }
+
+      button{
+         position: absolute;
+         left: 84%;
+         padding: .5rem;
+         background-color: black;
+         color: aliceblue;
+         letter-spacing: 2px;
+         font-weight: 800;
+         border: none;
+         
+      }
+   
+    
+    }
+    }
+}
+
+
+.ftr{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+img{
+    height: 50px;
+}
+
+    h6{
+    @include fuente($font_style,600,$Boton_colores,2px)
+       
+    }
+h1{
+    padding-bottom: 2rem;
+    @include fuente($font_style,900,black,4px)
+}
+    ul{
+        list-style: none;
+        li{
+            padding: 8px;
+        }
+        i{
+            margin: 4px;
+            padding: 4px;
+            font-size: 16px;
+            color: black;
+            
+        }
+    }
 }

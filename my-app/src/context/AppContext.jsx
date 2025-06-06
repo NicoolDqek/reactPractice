@@ -1,11 +1,12 @@
 import React, { Children, createContext, useEffect, useState } from 'react'
-import { getProducts } from '../data/Fetchs';
+import { getCategories, getProducts } from '../data/Fetchs';
 
 export const AppContextV=createContext()
 
 
 function AppContext({children}) {
     const [productList,setProductList]=useState([])
+    const [Categories,SetCategories]=useState([])
 
   useEffect(() => {
     getProducts()
@@ -16,9 +17,16 @@ function AppContext({children}) {
       .catch((error) => console.error("error:", error));
   }, []);
 
-
+  useEffect(() => {
+    getCategories()
+      .then((data) => {
+        console.log(data);
+        SetCategories(data );
+      })
+      .catch((error) => console.error("error:", error));
+  }, []);
   return (
-    <AppContextV.Provider value={{productList}}>
+    <AppContextV.Provider value={{productList,Categories}}>
       {children}
     </AppContextV.Provider>
   )

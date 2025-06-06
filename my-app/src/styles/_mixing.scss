@@ -1,0 +1,6 @@
+@mixin fuente($family,$ancho,$color,$letterSpacing){
+font-family: $family;
+font-weight: $ancho;
+color: $color;
+letter-spacing: $letterSpacing;
+}
