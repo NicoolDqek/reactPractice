@@ -1,5 +1,5 @@
-import React, { Children, createContext, useEffect, useState } from 'react'
-import { getCategories, getProducts } from '../data/Fetchs';
+import React, {createContext, useEffect, useState } from 'react'
+import { BradsJust, getCategories, getProducts } from '../data/Fetchs';
 
 export const AppContextV=createContext()
 
@@ -7,7 +7,8 @@ export const AppContextV=createContext()
 function AppContext({children}) {
     const [productList,setProductList]=useState([])
     const [Categories,SetCategories]=useState([])
-
+    const [justBrand,setJustBrad]=useState([])
+    
   useEffect(() => {
     getProducts()
       .then((data) => {
@@ -18,6 +19,16 @@ function AppContext({children}) {
   }, []);
 
   useEffect(() => {
+    BradsJust()
+      .then((data) => {
+        console.log(data);
+        const uniqueMarcas = Array.from(new Set(data.products.map(p => p.brand)));
+        setJustBrad(uniqueMarcas);
+        
+      })
+      .catch((error) => console.error("error:", error));
+  }, []);
+   useEffect(() => {
     getCategories()
       .then((data) => {
         console.log(data);
@@ -26,7 +37,7 @@ function AppContext({children}) {
       .catch((error) => console.error("error:", error));
   }, []);
   return (
-    <AppContextV.Provider value={{productList,Categories}}>
+    <AppContextV.Provider value={{productList,Categories,justBrand}}>
       {children}
     </AppContextV.Provider>
   )

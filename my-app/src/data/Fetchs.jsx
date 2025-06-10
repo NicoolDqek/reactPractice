@@ -26,6 +26,30 @@ export async function getCategories() {
     
 }
 
+export async function BradsJust() {
+  try {
+          const res= await fetch('https://dummyjson.com/products?limit=100&select=brand')
+          const data= await res.json()
+          return data
+    } catch (error) {
+        throw new Error("error en el get de productos", error)
+    }
+  
+}
+
+
+export async function getProductsById(id) {
+  
+    try {
+          const res= await fetch(`https://dummyjson.com/products/${id}`)
+          const data= await res.json()
+          return data
+    } catch (error) {
+        throw new Error("error en el get de productos", error)
+    }
+
+    
+}
 
 
 

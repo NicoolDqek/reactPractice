@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 function ProductCard({product}) {
   return (
@@ -14,7 +15,7 @@ function ProductCard({product}) {
     <span>-{product.discountPercentage}%</span>
     <h6>${product.price}</h6>
     <p className="card-text">{product.title}</p>
-    <button>Comprar</button>
+    <button><Link to={`/products/${product.id}`}>Comprar</Link></button>
 
   </div>
 </div>

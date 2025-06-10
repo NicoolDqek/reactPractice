@@ -50,5 +50,30 @@ span{
 .filtroSeccion{
     background-color: $vino_tinto;
     border-radius: 10px;
-    padding: 1rem;
+     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .btn{
+      max-width: 200px;
+      width: 200px;
+      min-width:100px;
+      background-color: $color_piel;
+       @include fuente($font_style,800,black,3px);
+      border: none;
+      font-size: 13px; 
+            
+      
+    }
+    .card{
+      background-color: $vino_tinto;
+      @include fuente($font_style,800,$color_piel,3px);
+      font-size:12px;
+      margin: 5px 0 ;
+    }
 }
+
+
+

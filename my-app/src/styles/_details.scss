@@ -1,0 +1,195 @@
+.details{
+    padding-top: 8rem;
+        @include fuente($font_style,300,rgb(62, 61, 61),3px);
+
+
+.image{
+        background-color: rgb(241, 241, 241);
+    
+}
+nav ol{
+    background-color: white;
+    padding-left: 0;
+
+    li,a{
+        @include fuente($font_style,300,rgb(136, 124, 124),3px);
+    }
+}
+.dd{
+    padding-left: 2rem;
+}
+span{
+    padding: 1rem;
+    
+}
+}
+
+.gallery{
+    
+    img{
+        background-color: rgb(241, 241, 241);
+    }
+}
+
+.details{
+    .cc{
+        border-top: 1px solid rgb(199, 198, 198);
+        padding-top: 2rem;
+    }
+    .redes{
+         
+        
+        ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            
+        }
+
+        i,b{
+         padding: 6px;
+        @include fuente($font_style,700,rgb(62, 61, 61),3px);
+        font-size: 12px;
+        }
+    }
+}
+
+
+.details{
+    h3{
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+
+    h6{
+        color: $vino_tinto;
+        font-size: 25px;
+    }
+    h4{
+        font-size: 12px;
+    }
+}
+
+.more{
+height: 60vh;
+width: 80%;
+margin-top: 5rem;
+
+ 
+.nav-item{
+    background-color:$color_piel;
+   
+    
+}
+
+.tab-content{
+    
+    padding: 2rem;
+    background-color: $color_piel;
+    border-radius: 0 20px 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    
+}
+}
+
+.more{ 
+    
+    overflow: scroll;
+    overflow-x: hidden;
+    a{
+        @include fuente($font_style,700,rgb(63, 62, 62),3px);
+       
+    }
+
+    .review{
+    
+     margin: 10px 0;
+     padding: 1rem;
+     border-radius: 10px;
+     @include fuente($font_style,200,$vino_tinto,4px);
+ 
+        img{
+            height: 30px;
+            background-color:$rojo-brillante;
+            border-radius: 50%;
+        }
+    }
+
+.review-d{
+    display: flex;
+    flex-direction: column;
+   
+
+    h6{
+        font-weight: 800;
+        font-size: 17px;
+
+    }
+h5{
+    font-size: 15px;
+}
+    h4{
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: rgb(78, 77, 77);
+    }
+}
+.tab-pane{
+    
+    h4{
+        font-size: 16px;
+        font-weight: 200;
+    }
+}     
+}
+
+
+.more{
+    
+  .detalles{
+   @include fuente($font_style,200,$vino_tinto,3px);
+   font-size: 13px;
+   padding: 1rem;
+  }
+   p{
+    @include fuente($font_style,200,$vino_tinto,3px);
+   font-size: 13px;
+   }
+  
+  .tabla{
+    padding: 5px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 1rem;
+    th{
+        padding: 3px;
+        font-size: 11px;
+    }
+  }
+
+  h6{
+    font-size: 11px;
+
+  }
+  h4{
+        font-weight: 700;
+    }
+  
+}
+
+.relative{
+    padding-top: 2rem;
+    h3{
+        margin-bottom: 4rem;
+        padding-top: 3rem;
+        @include fuente($font_style,500,·$vino_tinto,4px)
+    }
+    .relate{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
