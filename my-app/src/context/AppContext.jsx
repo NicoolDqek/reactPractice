@@ -8,6 +8,16 @@ function AppContext({children}) {
     const [productList,setProductList]=useState([])
     const [Categories,SetCategories]=useState([])
     const [justBrand,setJustBrad]=useState([])
+    const [buscado,setBuscado]=useState([])
+    const [buscar, setBuscar] = useState("");   
+
+
+      const inputBuscar=(e)=>{
+    const valor=e.target.value.toLowerCase();
+    setBuscar(valor);
+    const filtrado=productList.filter(f=>f.title.toLowerCase().includes(valor))
+    setBuscado(filtrado)
+  }
     
   useEffect(() => {
     getProducts()
@@ -37,7 +47,7 @@ function AppContext({children}) {
       .catch((error) => console.error("error:", error));
   }, []);
   return (
-    <AppContextV.Provider value={{productList,Categories,justBrand}}>
+    <AppContextV.Provider value={{productList,Categories,justBrand,buscar,buscado,inputBuscar}}>
       {children}
     </AppContextV.Provider>
   )

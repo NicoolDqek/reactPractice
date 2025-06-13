@@ -1,52 +1,61 @@
-import React from 'react'
+import React, { useContext, useState } from 'react';
 import "../styles/main.css";
 import { Link } from 'react-router';
+import { AppContextV } from '../context/AppContext';
+
 function Navbar() {
+
+  const {productList}=useContext(AppContextV);
+const { buscar, inputBuscar } = useContext(AppContextV);
+  
+
   return (
     <>
-         <nav className="navbar navbar-expand-lg navbar-light ">
-  <Link to={"/"} className="navbar-brand" href="#">PlussMark</Link>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <div className="collapse navbar-collapse" id="navbarNav">
-    <ul className="navbar-nav">
-      <li className="nav-item">
-        <Link to={"/"} className="nav-link" href="#">Home <span className="sr-only">(current)</span></Link>
-      </li>
-      <li className="nav-item">
-        <Link to={"/products"} className="nav-link" href="#">Productos</Link>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">Pricing</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link  " href="#">Disabled</a>
-      </li>
-      <div className='section-links'>
-        <li>
-        <a href=""><i class="bi bi-search"></i></a>
-      </li>
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <Link to={"/"} className="navbar-brand">PlussMark</Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-      <li>
-        <a href="">
-            <i class="bi bi-person-circle"></i>
-      </a>
-      </li>
-        
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link to={"/"} className="nav-link">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link to={"/products"} className="nav-link">Productos</Link>
+            </li>
+            <li className="nav-item">
+              <Link to={"/contacto"} className="nav-link" href="#">Contacto</Link>
+            </li>
+            <li className="nav-item">
+              <Link to={"/cuenta"} className="nav-link" href="#">Cuenta</Link>
+            </li>
+          </ul>
 
-      <li>
-        <a href="">
-            <i class="bi bi-cart"></i>
-        </a>
-      </li>
-      </div>
-      
-    </ul>
-  </div>
-</nav>
+          <div className="d-flex section-links ml-auto gap-2 mr-5 pr-5">
+            <input
+              type="text"
+              className="form-control mr-2 "
+              placeholder="🔎"
+              onChange={(e)=>inputBuscar(e)}
+              style={{ maxWidth: '200px',height:"20px" }}
+            />
+            <a href="#" className="nav-link">
+              <i className="bi bi-person-circle"></i>
+            </a>
+            <a href="#" className="nav-link">
+              <i className="bi bi-cart"></i>
+            </a>
+            <a href="#" className="nav-link">
+             <i class="bi bi-bag-heart"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

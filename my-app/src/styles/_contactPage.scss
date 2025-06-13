@@ -1,0 +1,144 @@
+.boderRight{
+    border-right: 1px solid rgb(138, 137, 137);
+}
+
+.tt{
+    @include fuente($font_style,400,$vino_tinto,3px);
+    text-transform: uppercase;
+    margin: 3rem 0;
+}
+.formulario{
+   font-size: 12px;
+   
+   input{
+    border: solid gray 1px;
+  &::placeholder{
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: rgb(142, 139, 139);
+   
+  }
+   }
+   label{
+    padding-top:10px;
+    @include fuente($font_style,700,$vino_tinto,3px);
+
+    
+   }
+   select{
+    display: flex;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    option{
+        @include fuente($font_style,300,rgb(101, 100, 100),3px); 
+    }
+   }
+
+   .message input{
+        min-height: 100px;
+        
+   }
+   button{
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: $rojo_brillante;
+    @include fuente($font_style,500,rgb(255, 255, 255),3px); 
+    font-size: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
+    &:hover{
+    background-color: $vino_tinto;
+    scale: 1.01;
+
+
+    }
+   }
+}
+
+
+
+.data-container{
+  padding-left: 4rem;
+    
+.data{
+    
+    margin-top: 10px;
+    h5{
+        @include fuente($font_style,400,$vino_tinto,4px); 
+
+
+    }
+    p{
+        @include fuente($font_style,500,black,4px); 
+        font-size: 10px;
+
+    }
+
+    span{
+        
+        @include fuente($font_style,500,$rojo_brillante,4px); 
+        font-size: 12px;
+        
+        i{
+           
+            background-color: $color_piel;
+            margin-left: 4px;
+            border-radius: 20px;
+             font-size: 22px;
+             margin-right: 6px;
+        }
+    }
+}
+}
+
+
+// section-2
+
+.section_2{
+    margin-top: 6rem;
+    padding: 1rem;
+
+  .acordeon-1{
+    h1{
+        font-size: 50px;
+        text-align: center;
+
+        @include fuente($font_style,900,$vino_tinto,1px); 
+        
+    }
+  }
+
+  .acordeon-2{
+
+    h6{
+        @include fuente($font_style,600,$vino_tinto,1px); 
+        
+    }
+    p{
+        line-height: 2rem;
+    }
+    .accordion-item{
+        
+    }
+  button{
+    border: none;
+    width: 70%;
+    background-color: rgb(198, 196, 196);
+    border-radius: 10px;
+    text-align: start;
+    font-size: 15px;
+    padding: 1rem;
+    @include fuente($font_style,600,$vino_tinto,1px); 
+
+  }
+  }
+  .accordion-body{
+    width: 70%;
+  }
+}

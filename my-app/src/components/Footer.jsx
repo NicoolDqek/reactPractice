@@ -3,26 +3,26 @@ import React from 'react'
 function Footer() {
   return (
     <div className='footer container'>
-      <div className='bnn'>
-        <div className='bnn1'>
+      <div className=' row bnn'>
+        <div className='col-lg-5 bg-dark-md col-md-4 col-sm-11 bnn1'>
         <h5>MORE INFORMATION</h5>
         <p>Si quieres conocer de nuestro productos y ofertas contactenos</p>
         </div>
-        <div className='bnn2'>
+        <div className='col-lg-5 bnn2 col-md-4 col-sm-11'>
         <h5>CONTACTO</h5>
         <p>recibe descuentos y notificaciones a tu bandeja de entrada</p>
         <div className='bar'><input type="text" placeholder='Entr your e-mail'/><button>Enviar</button></div>
         
         </div>
       </div>
-      <div className='ftr'>
-        <div className='text-center'>
+      <div className='row ftr'>
+        <div className='col-lg-3   text-center'>
             <h1>PlussMark</h1>
             <h6>We Are Open All Day Of The Week!</h6>
             <p>Open Time 8:00Am -5:00pm</p>
             <img src="https://www.paypal-community.com/t5/image/serverpage/image-id/56084iFE8EEC50D9040CCB?v=v2" alt="" />
         </div>
-        <div>
+        <div className='col-lg-2  '>
             <ul>
                 <li><b>USEFUL LINKS</b></li>
                 <li>Terms & Conditions</li>
@@ -31,7 +31,7 @@ function Footer() {
                 <li>Services</li>
             </ul>
         </div>
-          <div>
+          <div className='col-lg-2  '>
             <ul>
                 <li><b>INFORMATION</b></li>
                 <li>About Store</li>
@@ -40,7 +40,7 @@ function Footer() {
                 <li>Delivery</li>
             </ul>
         </div>
-          <div>
+          <div className='col-lg-2'>
             <ul>
                 <li><b>CONTACT</b></li>
                 <li>cll 154a-#145-66</li>

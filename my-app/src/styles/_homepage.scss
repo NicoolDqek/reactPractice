@@ -35,8 +35,8 @@
  
 }
 
-.collapse{
-    margin-left: 20%;
+.search {
+    
 }
 
 .section-links{
@@ -147,6 +147,7 @@ button{
     margin-top:3rem;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -157,21 +158,18 @@ button{
 
     margin-top: 4rem;
     padding-bottom: 1rem;
-    .bnn{
-      display:flex;
-      height: 30vh;
-      
+        
      
       
 
     .bnn1{
-        padding: 2rem;
+  padding: 2rem;
   background-color: rgb(35, 35, 34);
   @include fuente($font_style,400,white,2px)
     }
 
     .bnn2{
-        padding: 2rem;
+    padding: 2rem;
      background-color: $rojo_brillante;
      @include fuente($font_style,400,rgb(0, 0, 0),2px);
      
@@ -200,11 +198,11 @@ button{
     
     }
     }
-}
+
 
 
 .ftr{
-    display: flex;
+  
     justify-content: space-around;
     padding-top: 2rem;
 img{

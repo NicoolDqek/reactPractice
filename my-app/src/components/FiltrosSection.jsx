@@ -14,11 +14,12 @@ function FiltrosSection() {
   };
 
   return (
-    <div className="filtroSeccion">
-      <div>
-        <p>
-          <a
-            className="btn "
+    <div className="container filtroSeccion">
+      <div className='row'>
+        <div className='col-11'> 
+          <p>
+          <a 
+            className="btn w-75"
             data-toggle="collapse"
             href="#collapseMarca"
             role="button"
@@ -27,11 +28,12 @@ function FiltrosSection() {
           >
             Marca
           </a>
-        </p>
-        <div className="collapse m-0 p-0" id="collapseMarca">
-          <div className="card w-100 p-2 m-0 card-body">
+        </p></div>
+       
+        <div className="col-11 collapse m-0 p-0" id="collapseMarca">
+          <div className=" card w-100 p-2 m-0 card-body">
             {justBrand.map((marca, i) => (
-              <label key={i} style={{display: 'block', cursor: 'pointer', marginBottom: '5px'}}>
+              <label key={i} >
                 <input
                   type="checkbox"
                   checked={select.includes(marca)}
@@ -46,10 +48,11 @@ function FiltrosSection() {
           </div>
         </div>
       </div>
-      <div>
-        <p>
+      <div className='row'>
+        <div className='col-11'>
+          <p>
           <a
-            className="btn "
+            className="btn w-75"
             data-toggle="collapse"
             href="#collapseCategory"
             role="button"
@@ -59,6 +62,8 @@ function FiltrosSection() {
            Categoria
           </a>
         </p>
+        </div>
+        
         <div className="collapse m-0 p-0" id="collapseCategory">
           <div className="card w-100 p-2 m-0  card-body">
             {Categories.map((categoria, i) => (

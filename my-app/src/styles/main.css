@@ -27,10 +27,6 @@
   font-size: 22px;
 }
 
-.collapse {
-  margin-left: 20%;
-}
-
 .section-links {
   display: flex;
   margin-left: 10%;
@@ -124,17 +120,14 @@
   margin-top: 3rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer {
   margin-top: 4rem;
   padding-bottom: 1rem;
 }
-.footer .bnn {
-  display: flex;
-  height: 30vh;
-}
-.footer .bnn .bnn1 {
+.footer .bnn1 {
   padding: 2rem;
   background-color: rgb(35, 35, 34);
   font-family: "Raleway", sans-serif;
@@ -142,7 +135,7 @@
   color: white;
   letter-spacing: 2px;
 }
-.footer .bnn .bnn2 {
+.footer .bnn2 {
   padding: 2rem;
   background-color: #f01945;
   font-family: "Raleway", sans-serif;
@@ -150,15 +143,15 @@
   color: rgb(0, 0, 0);
   letter-spacing: 2px;
 }
-.footer .bnn .bnn2 .bar {
+.footer .bnn2 .bar {
   position: relative;
 }
-.footer .bnn .bnn2 input {
+.footer .bnn2 input {
   width: 90%;
   padding: 0.4rem;
   position: relative;
 }
-.footer .bnn .bnn2 button {
+.footer .bnn2 button {
   position: absolute;
   left: 84%;
   padding: 0.5rem;
@@ -170,7 +163,6 @@
 }
 
 .ftr {
-  display: flex;
   justify-content: space-around;
   padding-top: 2rem;
 }
@@ -346,18 +338,14 @@
 }
 
 .filtroSeccion {
-  background-color: #670d0f;
+  background-color: #f01945;
   border-radius: 10px;
   padding: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
 }
 .filtroSeccion .btn {
-  max-width: 200px;
-  width: 200px;
-  min-width: 100px;
   background-color: #ffe3c9;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -365,9 +353,10 @@
   letter-spacing: 3px;
   border: none;
   font-size: 13px;
+  margin-left: 8%;
 }
 .filtroSeccion .card {
-  background-color: #670d0f;
+  background-color: #f01945;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   color: #ffe3c9;
@@ -546,6 +535,149 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.boderRight {
+  border-right: 1px solid rgb(138, 137, 137);
+}
+
+.tt {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #670d0f;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 3rem 0;
+}
+
+.formulario {
+  font-size: 12px;
+}
+.formulario input {
+  border: solid gray 1px;
+}
+.formulario input::-moz-placeholder {
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: rgb(142, 139, 139);
+}
+.formulario input::placeholder {
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: rgb(142, 139, 139);
+}
+.formulario label {
+  padding-top: 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #670d0f;
+  letter-spacing: 3px;
+}
+.formulario select {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.formulario select option {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: rgb(101, 100, 100);
+  letter-spacing: 3px;
+}
+.formulario .message input {
+  min-height: 100px;
+}
+.formulario button {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f01945;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+  font-size: 15px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.formulario button:hover {
+  background-color: #670d0f;
+  scale: 1.01;
+}
+
+.data-container {
+  padding-left: 4rem;
+}
+.data-container .data {
+  margin-top: 10px;
+}
+.data-container .data h5 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #670d0f;
+  letter-spacing: 4px;
+}
+.data-container .data p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: black;
+  letter-spacing: 4px;
+  font-size: 10px;
+}
+.data-container .data span {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #f01945;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.data-container .data span i {
+  background-color: #ffe3c9;
+  margin-left: 4px;
+  border-radius: 20px;
+  font-size: 22px;
+  margin-right: 6px;
+}
+
+.section_2 {
+  margin-top: 6rem;
+  padding: 1rem;
+}
+.section_2 .acordeon-1 h1 {
+  font-size: 50px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: #670d0f;
+  letter-spacing: 1px;
+}
+.section_2 .acordeon-2 h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #670d0f;
+  letter-spacing: 1px;
+}
+.section_2 .acordeon-2 p {
+  line-height: 2rem;
+}
+.section_2 .acordeon-2 button {
+  border: none;
+  width: 70%;
+  background-color: rgb(198, 196, 196);
+  border-radius: 10px;
+  text-align: start;
+  font-size: 15px;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #670d0f;
+  letter-spacing: 1px;
+}
+.section_2 .accordion-body {
+  width: 70%;
 }
 
 * {

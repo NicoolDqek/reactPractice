@@ -17,15 +17,18 @@ function ProductSection() {
     setRender(filtro)
     }
     return (
-    <div className='section-p'>
-      <h1>Productos Destacados</h1>
-       
-      <div className='categorias'>
+      <div className='container'>
+        
+        
+
+    <div className='section-p row'>
+      <h1 >Productos Destacados</h1>
+      <div className='col-lg-11  categorias'>
         {Categories.slice(0,4).map((c,index)=>(
             <button onClick={()=>category(c.name)} key={index}>{c.name}</button>
         ))}
       </div>
-      <div className='product-section container'>
+      <div className='col-lg-11  product-section container'>
       {(render.length > 0 ? render : best).slice(0,4).map(p=>(
     <div key={p.id}>
         <ProductCard product={p}/>
@@ -33,6 +36,7 @@ function ProductSection() {
         
       ))}
       </div>
+    </div>
     </div>
   )
 }
