@@ -1,0 +1,66 @@
+.login{
+    background-image: url("https://as2.ftcdn.net/v2/jpg/13/75/43/55/1000_F_1375435546_jEyfauUaM5tXDwAIaPZ1GO6aLkpI6Fl0.jpg");
+   padding-top: 7rem;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   background-size: cover;
+   
+   
+    
+    
+.formulario{
+    background-color: $naranja_quemado;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 30px;
+     text-align: center;
+     width: 350px;
+h2{
+        @include fuente($font-style,800,white,3px);
+        padding-top: 10px;
+
+}
+     p{
+        @include fuente($font-style,600,white,3px);
+         
+        font-size: 16px;
+        
+     }
+}
+input{
+   padding: 10px;
+   border-radius: 5px;
+   margin-top: 10px;
+  
+}
+a{
+color: $vino_tinto; 
+display: inline-block;
+font-size:18px ;
+}
+span{
+    margin-bottom: 20px;
+ 
+    a{
+        border: 1px solid white;
+        padding: 5px;
+        margin: 3px;
+        border-radius: 10px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: .2s ease-in;
+        cursor: pointer;
+         color: white;
+    &:hover{
+        background-color: $rojo_brillante;
+        border-color:$rojo_brillante ;
+       
+    }  
+    }
+    a i{
+        padding: 5px;
+        
+    }
+}
+}

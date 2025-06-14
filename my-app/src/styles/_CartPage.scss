@@ -1,0 +1,145 @@
+.header-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include fuente($font_style,500,$vino_tinto,3px);
+    background-color: rgb(233, 225, 225);
+     
+H1,a{
+     @include fuente($font_style,700,$vino_tinto,3px);
+     padding-top: 2rem;
+     ;
+}
+    nav,ol{
+      background-color: rgb(233, 225, 225);
+        
+    }
+}   
+
+
+.carrito{
+
+    padding: 2rem;
+   
+    table{
+        
+        
+        .thead{
+            background-color: $vino_tinto;
+            @include fuente($font_style,300,white,4px);
+            font-size: 14px;
+            text-align: end;
+           
+             
+            
+        }
+        tbody{
+            text-align: end;
+        }
+    }
+}
+
+
+.total{
+   
+   border-radius: 10px;
+   table{
+    width: 100%;
+     
+    
+   }
+     
+    th{
+        
+        text-align: start;
+        color: gray;
+         
+
+        
+
+    }
+    th,td{
+        border: none;
+        padding:10px;
+    }
+    
+    button{
+        margin: 10px 0;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: $rojo_brillante;
+        letter-spacing: 3px;
+        color: white;
+        border: none;
+        font-size: 14px;
+    }
+}
+.targeta{
+   border-bottom: 1px solid rgb(190, 185, 185);
+     td{
+        @include fuente($font_style,700,black,2px);
+        
+    }
+    button{
+        border: none;
+        padding: 3px;
+        background-color: $rojo_brillante;
+        @include fuente($font_style,700,rgb(255, 255, 255),2px);
+        
+    }
+}
+.tarjetas{
+    tr{
+       background-color: black;
+
+    }
+    i{
+        font-size: 30px;
+         padding-right: 20px;
+    }
+    img{
+        background-color: rgb(222, 217, 217);
+        padding: 5px;
+    }
+    h6{
+        @include fuente($font_style,900,$vino_tinto,2px);
+        margin-left:20px;
+    }
+
+   
+}
+
+//wish page.....................................................
+
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(233, 225, 225);
+    nav,ol,a{
+
+        background-color: rgb(233, 225, 225);
+        @include fuente($font_style,500,$vino_tinto,2px);
+         
+    }
+
+
+}
+.lista-deseos{
+    padding: 1rem;
+    margin-top: 1rem;
+    
+ thead{
+    background-color: $vino_tinto;
+    color:$color_piel;
+
+th{
+    padding-left: 20px;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+ }
+}
+
+
+ 

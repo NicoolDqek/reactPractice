@@ -42,15 +42,15 @@ const { buscar, inputBuscar } = useContext(AppContextV);
               onChange={(e)=>inputBuscar(e)}
               style={{ maxWidth: '200px',height:"20px" }}
             />
-            <a href="#" className="nav-link">
+            <Link to={"/login"} className="nav-link">
               <i className="bi bi-person-circle"></i>
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to={"/cart"} className="nav-link">
               <i className="bi bi-cart"></i>
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to={"/wish"} className="nav-link">
              <i class="bi bi-bag-heart"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

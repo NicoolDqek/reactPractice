@@ -12,10 +12,10 @@ const [filtrado,setFiltrado]=useState([]);
 const ordenar = (e) => {
   const valor=e.target.value.toLowerCase()
   if (valor === "alfabeto") {
-    const ordenado = productList.sort((a, b) => a.title.localeCompare(b.title));
+    const ordenado = [...productList].sort((a, b) => a.title.localeCompare(b.title));
     setFiltrado(ordenado);
   } else if (valor === "precio") {
-    const ordenado = productList.sort((a, b) => a.price - b.price);
+    const ordenado = [...productList].sort((a, b) => a.price - b.price);
     setFiltrado(ordenado);
   } else {
     setFiltrado(productList); // sin orden
@@ -52,8 +52,8 @@ const ordenar = (e) => {
       <div className='col-lg-8  col-md-9 col-sm-11 d-flex  justify-content-center flex-wrap'>
 
         {buscado.length === 0 && buscar.length > 0 ?(
-          <div className='d-flex align-items-center flex-column'><p>No se encontraron coincidencias.</p>
-          <img className='h-50 w-50 ' src="https://cdn-icons-png.flaticon.com/512/7486/7486744.png" alt="" />
+          <div className='d-flex align-items-center  flex-column  col-lg-8 col-md-9 col-sm-11'><p>No se encontraron coincidencias.</p>
+          <img className='h-50 w-50' src="https://cdn-icons-png.flaticon.com/512/7486/7486744.png" alt="" />
           </div>
           
         ):((buscar.length > 0  ? buscado : filtrado.length > 0 ? filtrado : productList).map(p=>(
