@@ -4,6 +4,8 @@ import { getProductsById } from '../data/Fetchs';
 import { useParams } from 'react-router';
 import { AppContextV } from '../context/AppContext';
 import ProductCard from './ProductCard';
+import { ContextCart } from '../context/CartContext';
+import { ContextWish } from '../context/WishContext';
 
 
 
@@ -15,8 +17,8 @@ const [imgPrincipal,setImgPrincipal]=useState("")
 const { id } = useParams();
 const {productList}=useContext(AppContextV)
 const [relatives, setRelative] = useState([]);
-
-
+const {agregarW}=useContext(ContextWish)
+const {agregar}=useContext(ContextCart);
 
 
 
@@ -24,7 +26,6 @@ const [relatives, setRelative] = useState([]);
 useEffect(() => {
     getProductsById(id)
       .then((data) => {
-        console.log("data:", data);
         setProduct(data);
           if (productList && productList.length > 0) {
         const relacionados = productList.filter(
@@ -58,11 +59,11 @@ useEffect(() => {
             </div>
             <div className='col-lg-6  dd'>
  <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Datos</li>
-  </ol>
+  <ol className="breadcrumb">
+    <li className="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li className="breadcrumb-item"><a href="#">Biblioteca</a></li>
+    <li className="breadcrumb-item active" aria-current="page">Datos</li>
+  </ol> 
 </nav>
              <h3>{product.title}</h3>
              <h6>${product.price}</h6>
@@ -70,18 +71,19 @@ useEffect(() => {
              <p className='pt-2'>{product.description}</p>
              <p>minima cantidad de orden: <b>{product.minimumOrderQuantity}</b></p>
               <section className='pb-3'>
-               <span><i class="bi bi-share"></i>Compartir</span>
-              <span><i class="bi bi-heart"></i>Add Lista Deseos</span>
+               <span><i className="bi bi-share"></i>Compartir</span>
+              <span><i className="bi bi-heart"></i><button onClick={()=>agregarW(product)} style={{border:"none",backgroundColor:"white"}}>Add To Wish List</button></span>
+              <span ><i className="bi bi-cart"></i><button onClick={()=>agregar(product)} style={{border:"none",backgroundColor:"white"}}>Add To Cart</button></span>
               </section>
               <div className='cc'>
                 <h4><b>Category: </b>{product.category}</h4>
                 <div className='redes'>
                     <ul>
                         <li><b>Share:</b></li>
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-twitter-x"></i>
-                        <i class="bi bi-pinterest"></i>
-                        <i class="bi bi-instagram"></i>
+                        <i className="bi bi-facebook"></i>
+                        <i className="bi bi-twitter-x"></i>
+                        <i className="bi bi-pinterest"></i>
+                        <i className="bi bi-instagram"></i>
                     </ul>
                 </div>
               </div>
@@ -89,22 +91,22 @@ useEffect(() => {
         </div>
       </div>
  <div className='container more'>
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Descripcion</a>
+<ul className="nav nav-tabs" id="myTab" role="tablist">
+  <li className="nav-item">
+    <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Descripcion</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Detalles</a>
+  <li className="nav-item">
+    <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Detalles</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Reviews</a>
+  <li className="nav-item">
+    <a className="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Reviews</a>
   </li>
 </ul>
-<div class="   tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<div className="tab-content" id="myTabContent">
+  <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <h4>{product.description}</h4>
   </div>
-  <div class="tab-pane container fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+  <div className="tab-pane container fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 <div className='row detalles'>
 <div className='col-lg-2 col-md-3 col-sm-4'>
 <h4 className='mm'>{product.brand}</h4>
@@ -114,8 +116,8 @@ useEffect(() => {
 <div className='col-lg-9 co-md-8 col-sm-7'>
 
 <h5>{product.title}</h5>
- {product.tags.map(t=>(
-  <h6>{t}</h6>
+ {product.tags.map((t,index)=>(
+  <h6 key={index}>{t}</h6>
   ))} 
 <p>{product.description}</p>
 <p><b>Dimensiones:</b></p>
@@ -145,10 +147,10 @@ useEffect(() => {
 </div>
 </div>
   </div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
     
-    {product.reviews.map(r=>(
-        <div className='review container' key={product.id}>
+    {product.reviews.map((r,index)=>(
+        <div className='review container' key={index}>
           <div className='row'>
            <div className='col-lg-1'>
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010" alt="" />
@@ -169,8 +171,8 @@ useEffect(() => {
     <div className='relative container '>
      <div><h3 className='text-center'>Productos Relacionadas</h3></div> 
      <div className='d-flex relate'> 
-      {relatives.slice(0,4).map(r=>(
-      <ProductCard product={r}/>
+      {relatives.slice(0,4).map((r)=>(
+      <ProductCard key={r.id} product={r}/>
     ))}</div>
      
     

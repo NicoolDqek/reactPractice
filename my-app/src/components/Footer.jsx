@@ -47,10 +47,10 @@ function Footer() {
                 <li>PlussMark@gmail.com</li>
                 <li>+57 3118713672</li>
                 <div className='mt-4'>
-                 <i class="bi bi-facebook"></i>   
-                 <i class="bi bi-whatsapp"></i>
-                <i class="bi bi-instagram"></i> 
-                <i class="bi bi-pinterest"></i>
+                 <i className="bi bi-facebook"></i>   
+                 <i className="bi bi-whatsapp"></i>
+                <i className="bi bi-instagram"></i> 
+                <i className="bi bi-pinterest"></i>
                 </div>
                 <li><footer>© Copyright 2025 NQEK</footer>
 </li> 

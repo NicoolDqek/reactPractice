@@ -1,6 +1,9 @@
 import React from 'react'
 
-function LoginFormulario() {
+function LoginFormulario({setIsRegister,isRegister}) {
+
+  
+
   return (
     <div>
        <div className='login'>
@@ -18,7 +21,7 @@ function LoginFormulario() {
           <a href=""><i class="bi bi-apple"></i>Apple ID</a>
           <a href=""><i class="bi bi-facebook"></i>Facebook</a>
         </span>
-        <p className='pt-3'>¿no tienes una Cuenta?<a href=""><b>registrar</b></a></p>
+        <p className='pt-3'>¿no tienes una Cuenta?<a  style={{cursor:"pointer"}} onClick={() =>setIsRegister(!isRegister)}><b>registrar</b></a></p>
        </div>
       </div>
       </div>

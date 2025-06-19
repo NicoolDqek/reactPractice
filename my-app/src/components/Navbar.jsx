@@ -49,7 +49,7 @@ const { buscar, inputBuscar } = useContext(AppContextV);
               <i className="bi bi-cart"></i>
             </Link>
             <Link to={"/wish"} className="nav-link">
-             <i class="bi bi-bag-heart"></i>
+             <i className="bi bi-bag-heart"></i>
             </Link>
           </div>
         </div>

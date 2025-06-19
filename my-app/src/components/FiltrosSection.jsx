@@ -74,7 +74,7 @@ function FiltrosSection() {
                   onChange={() => toggleSelect(categoria)}
                   style={{marginRight: '8px'}}
                 />
-                {categoria.name}
+                {categoria}
               </label>
             ))}
 
