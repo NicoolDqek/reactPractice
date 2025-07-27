@@ -30,7 +30,7 @@ const { buscar, inputBuscar } = useContext(AppContextV);
               <Link to={"/contacto"} className="nav-link" href="#">Contacto</Link>
             </li>
             <li className="nav-item">
-              <Link to={"/cuenta"} className="nav-link" href="#">Cuenta</Link>
+              <Link to={"/"} className="nav-link" href="#">Cuenta</Link>
             </li>
           </ul>
 
