@@ -31,7 +31,7 @@ function AppContext({children}) {
   useEffect(() => {
     BradsJust()
       .then((data) => {
-        const uniqueMarcas = Array.from(new Set(data.products.map(p => p.brand)));
+        const uniqueMarcas =(new Set(data.products.map(p => p.brand)));
         setJustBrad(uniqueMarcas);
         
       })

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import axios from "axios";
 
 
@@ -6,7 +6,7 @@ import axios from "axios";
         baseURL:"https://dummyjson.com",
         headers: {
     "Content-Type": "application/json",
-  },
+  },  
     }) 
 
 

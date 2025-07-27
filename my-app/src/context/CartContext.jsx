@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 
 
@@ -7,7 +7,29 @@ export const ContextCart=createContext()
 
 function CartContext({children}) {
 
-const [carrito,setCarrito]=useState([])
+const [carrito,setCarrito]=useState(()=>{
+  try {
+    const UpCart=localStorage.getItem("cart");
+    return UpCart ? JSON.parse(UpCart) : [];
+  } catch (error) {
+    console.log("error en localSotrange Get",error)
+    return [];
+  }
+})
+
+
+
+// actualizar localStorange
+
+useEffect(()=>{
+  try {
+    localStorage.setItem("cart",JSON.stringify(carrito))
+  } catch (error) {
+    console.error("error al actulizar data localSotrage",error)
+  }
+},[carrito])
+
+
 
 //agregar producto 
 const agregar = (producto) => {
@@ -25,14 +47,20 @@ const agregar = (producto) => {
   }
 };
 
+
+
+
+
+
+
+
+
 // quitar producto
 
 const quitar=(producto)=>{
-const existe=carrito.find(p => p.id === producto.id);
-if (existe){
-  const eliminar=carrito.filter(p=> p.id !==producto.id)
-  setCarrito(eliminar)
-}
+  setCarrito(carrito.map(p=> p.id === producto.id ? {...p,cantidad:p.cantidad-1}
+    :p).filter(p=> p.cantidad > 0))
+
 }
 // cantidad
 

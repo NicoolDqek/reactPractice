@@ -1,9 +1,33 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 export const ContextWish=createContext()
 
 function WishContext({children}) {
 
-const [wish,setwish]=useState([])
+const [wish,setwish]=useState(()=>{
+
+  try {
+    const UpWish=localStorage.getItem("wish");
+    return UpWish ? JSON.parse(UpWish) : [];
+
+  } catch (error) {
+    console.error("error en peticion GET de Wish List",error);
+    return [];
+  }
+})
+
+
+// actulizar wish List Local
+
+
+useEffect(()=>{
+  try {
+    localStorage.setItem("wish",JSON.stringify(wish))
+  } catch (error) {
+    console.error("error en actualizar wish list",error)
+  }
+})
+
+
 
 // agregar  
 
