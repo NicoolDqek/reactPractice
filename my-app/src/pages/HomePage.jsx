@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import ProductList from '../components/ProductList'
 import Carousel from '../components/Carousel'
-import ProductSection from '../components/productSection'
+import ProductSection from '../components/ProductSection'
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 
