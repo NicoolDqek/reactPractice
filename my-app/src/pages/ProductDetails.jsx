@@ -1,4 +1,4 @@
-import CardDetails from "../components/cardDetails"
+import CardDetails from "../components/CardDetails"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 
